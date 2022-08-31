@@ -75,6 +75,9 @@ h1{
     color: transparent;
 }
 @media screen and (max-width:1023px){
+    h1{
+        width: 90%;
+    }
     .textImput{
         background-color: transparent;
         color: transparent;
