@@ -1,5 +1,5 @@
 const words = ['seguridad', 'calidad', 'inocuidad'];
-const questions = ['se da cuando todas las personas tienen acceso físico, social y económico permanente a alimentos seguros, nutritivos y en cantidad suficiente para satisfacer sus requerimientos nutricionales y preferencias alimentarias, y así poder llevar una vida activa y saludable.', 'Conjunto de propiedades inherentes a una cosa que permite caracterizarla y valorarla con respecto a las restantes de su especie', 'la ausencia de elementos dañinos en los alimentos, lo que garantiza un consumo seguro por parte de los humanos. Estos componentes dañinos pueden ser de carácter biológico, químico o físico.']
+const questions = ['se da cuando todas las personas tienen acceso físico, social y económico permanente a alimentos seguros, nutritivos y en cantidad suficiente para satisfacer sus requerimientos nutricionales y preferencias alimentarias, y así poder llevar una vida activa y saludable:', 'Conjunto de propiedades inherentes a una cosa que permite caracterizarla y valorarla con respecto a las restantes de su especie:', 'la ausencia de elementos dañinos en los alimentos, lo que garantiza un consumo seguro por parte de los humanos. Estos componentes dañinos pueden ser de carácter biológico, químico o físico:']
 
 
 const wordContainer = document.getElementById('wordContainer');
