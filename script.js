@@ -120,7 +120,7 @@ const startGame = () => {
     selectRandomWord();
     drawWord();
     document.addEventListener('keydown', letterEvent);
-    document.getElementById("textImput").style.display = "block";
+    document.getElementById("textImput").style.display = "inline-block";
 };
 
 startButton.addEventListener('click', startGame);
