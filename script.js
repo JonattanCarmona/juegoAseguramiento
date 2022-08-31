@@ -40,7 +40,7 @@ const wrongLetter = () => {
     if(mistakes == 5){
         document.getElementById("ahorcado6").style.display = "none";
         document.getElementById("ahorcado7").style.display = "block";
-        window.alert("Perdiste :c");
+        window.alert("Fallaste, inténtalo nuevamente :c");
         
         endGame();
     }
@@ -65,7 +65,7 @@ const correctLetter = letter => {
         }
     }
     if(hits === selectedWord.length){
-        window.alert("Ganaste");
+        window.alert("Acertaste, la palabra era: " + selectedWord);
         endGame();
     } 
 }
