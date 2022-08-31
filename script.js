@@ -121,6 +121,7 @@ const startGame = () => {
     drawWord();
     document.addEventListener('keydown', letterEvent);
     document.getElementById("textImput").style.display = "inline-block";
+    document.getElementById("textImput").addEventListener('keydown', letterEvent);
 };
 
 startButton.addEventListener('click', startGame);
