@@ -123,7 +123,7 @@ const startGame = () => {
     document.addEventListener('keypress', letterEvent);
     //document.getElementById("textImput").addEventListener('keypress', letterEvent);
     let inputtext = document.getElementById("textInput");
-    inputtext.addEventListener('Input', letterEvent);
+    inputtext.addEventListener('input', letterEvent);
     inputtext.addEventListener('textInput', letterEvent);
 };
 
