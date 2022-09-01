@@ -81,11 +81,12 @@ const letterInput = letter => {
 };
 
 const letterEvent = event => {
+    console.log(event);
     let newLetter = event.key.toUpperCase();
     if(newLetter.match(/^[a-zñ]$/i) && !usedLetters.includes(newLetter)) {
         letterInput(newLetter);
     };
-    console.log(newletter);
+    
 };
 
 const drawWord = () => {
