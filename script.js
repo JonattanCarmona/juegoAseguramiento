@@ -121,9 +121,11 @@ const startGame = () => {
     drawHangMan();
     selectRandomWord();
     drawWord();
-    document.addEventListener('keypress', letterEvent);
     document.getElementById("textImput").style.display = "inline-block";
-    document.getElementById("textImput").addEventListener('keypress', letterEvent);
+    //document.addEventListener('keypress', letterEvent);
+    //document.getElementById("textImput").addEventListener('keypress', letterEvent);
+    let inputtext = document.getElementById("textImput")
+    input_field.addEventListener('textInput', function (ev) { console.log(ev)});
 };
 
 startButton.addEventListener('click', startGame);
