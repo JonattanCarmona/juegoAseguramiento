@@ -63,7 +63,7 @@ h1{
     font-weight: bold;
     color: #002f6c;
 }
-.textInput{
+.textImput{
     background-color: transparent;
     color: transparent;
     border-color: transparent;
@@ -78,7 +78,7 @@ h1{
     h1{
         width: 90%;
     }
-    .textInput{
+    .textImput{
         background-color: transparent;
         color: transparent;
         border-color: transparent;

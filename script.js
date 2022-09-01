@@ -65,7 +65,7 @@ const correctLetter = letter => {
         }
     }
     if(hits === selectedWord.length){
-        window.alert("Acertaste, la palabra era: " + selectedWord);
+        window.alert("Acertaste, la palabra era: " + word);
         endGame();
     } 
 }
@@ -81,8 +81,8 @@ const letterInput = letter => {
 };
 
 const letterEvent = event => {
-    let newLetter = event.data.toUpperCase();
-    if (newLetter.match(/^[a-zñ]$/i) && !usedLetters.includes(newLetter)) {
+    let newLetter = event.key.toUpperCase();
+    if(newLetter.match(/^[a-zñ]$/i) && !usedLetters.includes(newLetter)) {
         letterInput(newLetter);
     };
 };
@@ -119,12 +119,9 @@ const startGame = () => {
     drawHangMan();
     selectRandomWord();
     drawWord();
-    document.getElementById("textInput").style.display = "inline-block";
-    document.addEventListener('keypress', letterEvent);
-    //document.getElementById("textImput").addEventListener('keypress', letterEvent);
-    let inputtext = document.getElementById("textInput");
-    inputtext.addEventListener('input', letterEvent);
-    inputtext.addEventListener('textInput', letterEvent);
+    document.addEventListener('keydown', letterEvent);
+    document.getElementById("textImput").style.display = "inline-block";
+    document.getElementById("textImput").addEventListener('keydown', letterEvent);
 };
 
 startButton.addEventListener('click', startGame);
