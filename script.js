@@ -85,6 +85,7 @@ const letterEvent = event => {
     if(newLetter.match(/^[a-zñ]$/i) && !usedLetters.includes(newLetter)) {
         letterInput(newLetter);
     };
+    console.log(newletter);
 };
 
 const drawWord = () => {
@@ -119,9 +120,9 @@ const startGame = () => {
     drawHangMan();
     selectRandomWord();
     drawWord();
-    document.addEventListener('keydown', letterEvent);
+    document.addEventListener('keypress', letterEvent);
     document.getElementById("textImput").style.display = "inline-block";
-    document.getElementById("textImput").addEventListener('keydown', letterEvent);
+    document.getElementById("textImput").addEventListener('keypress', letterEvent);
 };
 
 startButton.addEventListener('click', startGame);
