@@ -65,7 +65,7 @@ const correctLetter = letter => {
         }
     }
     if(hits === selectedWord.length){
-        window.alert("Acertaste, la palabra era: " + word);
+        window.alert("Acertaste, la palabra era: " + selectedWord);
         endGame();
     } 
 }
