@@ -124,7 +124,7 @@ const startGame = () => {
     document.getElementById("textImput").style.display = "inline-block";
     //document.addEventListener('keypress', letterEvent);
     //document.getElementById("textImput").addEventListener('keypress', letterEvent);
-    let inputtext = document.getElementById("textImput")
+    let inputtext = document.getElementById("textImput");
     inputtext.addEventListener('textInput', function (ev) { console.log(ev)});
 };
 
