@@ -81,12 +81,10 @@ const letterInput = letter => {
 };
 
 const letterEvent = event => {
-    console.log(event);
-    let newLetter = event.key.toUpperCase();
-    if(newLetter.match(/^[a-zñ]$/i) && !usedLetters.includes(newLetter)) {
+    let newLetter = event.data.toUpperCase();
+    if (newLetter.match(/^[a-zñ]$/i) && !usedLetters.includes(newLetter)) {
         letterInput(newLetter);
     };
-    
 };
 
 const drawWord = () => {
@@ -125,7 +123,7 @@ const startGame = () => {
     //document.addEventListener('keypress', letterEvent);
     //document.getElementById("textImput").addEventListener('keypress', letterEvent);
     let inputtext = document.getElementById("textImput");
-    inputtext.addEventListener('textInput', function (ev) { console.log(ev)});
+    inputtext.addEventListener('textInput', letterEvent);
 };
 
 startButton.addEventListener('click', startGame);
