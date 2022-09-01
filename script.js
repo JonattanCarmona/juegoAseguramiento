@@ -10,6 +10,7 @@ let selectedWord;
 let usedLetters;
 let mistakes;
 let hits;
+let word;
 
 const addLetter = letter => {
     const letterElement = document.createElement('span');
@@ -65,7 +66,7 @@ const correctLetter = letter => {
         }
     }
     if(hits === selectedWord.length){
-        window.alert("Acertaste, la palabra era: " + words);
+        window.alert("Acertaste, la palabra era: " + word);
         endGame();
     } 
 }
@@ -99,7 +100,8 @@ const drawWord = () => {
 
 const selectRandomWord = () => {
     let i = Math.floor((Math.random() * words.length));
-    let word = words[i].toUpperCase();
+    word = words[i].toUpperCase();
+    
     selectedWord = word.split('');
     document.getElementById("title").innerHTML = questions[i];
 };
