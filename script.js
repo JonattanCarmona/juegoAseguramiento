@@ -87,6 +87,13 @@ const letterEvent = event => {
         letterInput(newLetter);
     };
 };
+const letterEvent2 = event => {
+    let newLetter = event.data.toUpperCase();
+    if (newLetter.match(/^[a-zñ]$/i) && !usedLetters.includes(newLetter)) {
+        letterInput(newLetter);
+        inputtext.innerHTML = '';
+    };
+};
 
 const drawWord = () => {
     selectedWord.forEach(letter => {
@@ -124,6 +131,9 @@ const startGame = () => {
     document.addEventListener('keydown', letterEvent);
     document.getElementById("textImput").style.display = "inline-block";
     document.getElementById("textImput").addEventListener('keydown', letterEvent);
+    let inputtext = document.getElementById("textInput");
+    inputtext.addEventListener('input', letterEvent2);
+    inputtext.addEventListener('textInput', letterEvent2);
 };
 
 startButton.addEventListener('click', startGame);
