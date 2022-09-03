@@ -129,8 +129,7 @@ const startGame = () => {
     selectRandomWord();
     drawWord();
     document.addEventListener('keydown', letterEvent);
-    document.getElementById("textImput").style.display = "inline-block";
-    document.getElementById("textImput").addEventListener('keydown', letterEvent);
+    document.getElementById("textInput").style.display = "inline-block";
     let inputtext = document.getElementById("textInput");
     inputtext.addEventListener('input', letterEvent2);
     inputtext.addEventListener('textInput', letterEvent2);
