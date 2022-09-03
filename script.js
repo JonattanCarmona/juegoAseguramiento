@@ -91,8 +91,8 @@ const letterEvent2 = event => {
     let newLetter = event.data.toUpperCase();
     if (newLetter.match(/^[a-zñ]$/i) && !usedLetters.includes(newLetter)) {
         letterInput(newLetter);
-        inputtext.innerHTML = '';
     };
+    inputtext.value = '';
 };
 
 const drawWord = () => {
