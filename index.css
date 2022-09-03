@@ -75,6 +75,10 @@ h1{
     display: none;
     
 }
+.textInput:focus { 
+    outline: none;
+    border-color: none;
+}
 ::placeholder{
     color: transparent;
 }
