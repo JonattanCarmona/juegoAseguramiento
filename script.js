@@ -5,6 +5,7 @@ const questions = ['Se da cuando todas las personas tienen acceso físico, socia
 const wordContainer = document.getElementById('wordContainer');
 const startButton = document.getElementById('startButton');
 const usedLettersElement = document.getElementById('usedLetters');
+let inputtext = document.getElementById("textInput");
 
 let selectedWord;
 let usedLetters;
@@ -92,10 +93,10 @@ const letterEvent2 = event => {
     if (newLetter.match(/^[a-zñ]$/i) && !usedLetters.includes(newLetter)) {
         letterInput(newLetter);
         inputtext.value = '';
-        inputtext.reset();
+        
     };
     inputtext.value = '';
-    inputtext.reset();
+    
 };
 
 const drawWord = () => {
@@ -133,7 +134,7 @@ const startGame = () => {
     drawWord();
     document.addEventListener('keydown', letterEvent);
     document.getElementById("textInput").style.display = "inline-block";
-    let inputtext = document.getElementById("textInput");
+    
     inputtext.addEventListener('input', letterEvent2);
     inputtext.addEventListener('textInput', letterEvent2);
 };
