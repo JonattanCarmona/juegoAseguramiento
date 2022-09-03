@@ -13,14 +13,18 @@ main{
     text-align: center;
 }
 h1{
+
     margin: 0 auto;
     font-weight: bold;
     font-size: large;
     width: 50%;
 }
+.ahorcado{
+    display: inline-block;
+}
 #ahorcado0{
     margin: 1em auto;
-    display: block;
+    display: inline-block;
 }
 .iniciarjuego{
     display: block;
@@ -75,9 +79,11 @@ h1{
     color: transparent;
 }
 
-@media screen and (max-width:1023px){
+@media screen and (max-width:768px){
     h1{
-        width: 90%;
+        width: 45%;
+        display: inline-block;
+        text-align: justify;
     }
     .textInput{
         background-color: transparent;
@@ -86,6 +92,9 @@ h1{
     }
     ::placeholder{
         color: #002f6c;
+    }
+    #ahorcado0, #ahorcado1, #ahorcado2, #ahorcado3, #ahorcado4, #ahorcado5, #ahorcado6, #ahorcado7{
+        max-width: 147px;
     }
        
 }
