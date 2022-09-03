@@ -83,7 +83,9 @@ h1{
     h1{
         width: 45%;
         display: inline-block;
+        vertical-align: top;
         text-align: center;
+
     }
     .textInput{
         background-color: transparent;
